@@ -1,0 +1,15 @@
+﻿<Window x:Class="DXSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+        xmlns:local="clr-namespace:DXSample"
+        Title="MainWindow" Height="90" Width="525">
+    <dxlc:LayoutControl Padding="0" Orientation="Horizontal">
+        <dxlc:LayoutGroup>
+            <local:SaveWidthContentControl HorizontalAlignment="Left" dxlc:LayoutControl.AllowHorizontalSizing="True" ContentWidth="250">
+                <TextBlock Margin="12,12,12,0" Text="I am a very long text. I am included in the TextBlock control. If this TextBlock gets double.NaN in its Width, it will stretch and show me. However, the SaveWidthContentControl does not allow the Splitter to set double.NaN in the TextBlock." TextTrimming="CharacterEllipsis"/>
+            </local:SaveWidthContentControl>
+            <TextBlock Margin="12,12,12,0" HorizontalAlignment="Left" Text="Second TextBlock"/>
+        </dxlc:LayoutGroup>
+    </dxlc:LayoutControl>
+</Window>
